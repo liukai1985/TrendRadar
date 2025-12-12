@@ -1,28 +1,11 @@
-name: Verify Actions Workflow
+name: Minimal Test
 
 on:
   workflow_dispatch:
 
 jobs:
-  verify:
+  hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Checkout
-        run: echo "Step 1: Checkout (simulated)"
-        
-      - name: Step 2 - Setup
-        run: echo "Step 2: Setup environment"
-        
-      - name: Step 3 - Run Test
-        run: |
-          echo "Step 3: Running test"
-          echo "Current time: $(date)"
-          echo "Test completed successfully!"
-          
-      - name: Step 4 - Create Output
-        run: |
-          echo "Test result: PASS" > result.txt
-          echo "File created"
-          
-      - name: Step 5 - Show Result
-        run: cat result.txt
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
